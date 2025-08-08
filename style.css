@@ -235,8 +235,8 @@ h3 {
     background-color: white;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    border: 1px solid #E1E4E8;
+    border-right: 1x solid #E1E4E8;
+
 }
 
 .chart-title {
@@ -346,15 +346,20 @@ h3 {
 .bar-height-9 { height: 60px; }
 .bar-height-10 { height: 60px; }
 .bar-height-11 { height: 110px; }
-.bar-height-12 { height: 110px; }    
+.bar-height-12 { height: 110px; }  
+
 .dashboard .row-1 .donut-chart {
     flex: 1 1 0;             
-    background-color: #2196F3;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: black;
     font-weight: bold;
+}
+
+#revenue-percentage{
+    color: green
 }
 
 .dashboard .row-2 {
@@ -370,29 +375,29 @@ h3 {
 }
 
 .dashboard .row-2 .circle {
-    background-color: #FF9800;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 
 .dashboard .row-2 .list {
-    background-color: #9C27B0;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 
 .dashboard .row-2 .line-chart {
-    background-color: #F44336;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 
