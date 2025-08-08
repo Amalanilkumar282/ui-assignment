@@ -52,13 +52,13 @@ body {
     align-items: center;
     justify-content: center;
     color: white;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 16px;
 }
 
 .logo-text {
     color: #5A67BA;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 14px;
 }
 
@@ -170,14 +170,14 @@ body {
     align-items: center;
     justify-content: center;
     color: white;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 14px;
 }
 
 .username {
     color: #273240;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .dropdown-arrow {
@@ -250,7 +250,7 @@ h3 {
 
 .chart-title {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
     color: #1F384C;
     margin: 0;
 }
@@ -261,7 +261,7 @@ h3 {
     color: #5A6ACF;
     padding: 6px 12px;
     font-size: 11px;
-    font-weight: 500;
+    font-weight: 400;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -288,7 +288,7 @@ h3 {
     gap: 6px;
     font-size: 11px;
     color: #1F384C;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .legend-dot {
@@ -419,7 +419,7 @@ h3 {
 .bar-height-12 { height: 75px; }  
 
 .dashboard .row-1 .donut-chart {
-    flex: 0.955 1 0;             
+    flex: .9 1 0;             
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -437,7 +437,7 @@ h3 {
 
 .donut-title {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
     color: #1F384C;
     margin: 0;
     display: flex;
@@ -489,7 +489,7 @@ h3 {
 .donut-total {
     display: block;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 400;
     color: #1F384C;
     line-height: 1;
 }
@@ -516,7 +516,7 @@ h3 {
     gap: 0px;
     font-size: 11px;
     color: #1F384C;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .legend-top {
@@ -545,7 +545,7 @@ h3 {
 }
 
 .donut-legend-item .percentage {
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -563,7 +563,7 @@ h3 {
 .dashboard .row-2 {
     display: flex;
     gap: 0px;
-    flex: 1 1 0;             
+    flex: 1.1 1 0;             
     min-height: 0;           
 }
 
@@ -578,18 +578,99 @@ h3 {
     align-items: center;
     justify-content: center;
     color: black;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .dashboard .row-2 .list {
     background-color: white;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    font-weight: bold;
+    flex-direction: column;
+    padding: 20px;
     border-left: solid 1px #C8CBD9;
+}
 
+.list-header {
+    margin-bottom: 20px;
+}
+
+.list-header h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #1F384C;
+    margin: 0 0 5px 0;
+}
+
+.list-subtitle {
+    font-size: 12px;
+    color: #6B7280;
+    margin: 0;
+    font-weight: 400;
+}
+
+.food-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.food-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom:8px;
+    border-bottom: 1px solid #E1E4E8;
+}
+
+.food-item:last-child {
+    border-bottom: none;
+}
+
+.food-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.salad-bowl {
+    background-color: #E8F5E8;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="%23D4E9D4"/><path d="M12 18c0-4.4 3.6-8 8-8s8 3.6 8 8v4c0 2.2-1.8 4-4 4h-8c-2.2 0-4-1.8-4-4v-4z" fill="%234CAF50"/><circle cx="16" cy="16" r="2" fill="%23FF6B6B"/><circle cx="24" cy="16" r="2" fill="%23FFC107"/></svg>');
+}
+
+.chicken-noodles {
+    background-color: #FFF4E6;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="%23FFE0B3"/><rect x="10" y="15" width="20" height="10" rx="2" fill="%23FF9800"/><path d="M12 20h16v2H12z" fill="%23FFC107"/><circle cx="16" cy="18" r="1" fill="%23FF6B6B"/><circle cx="24" cy="18" r="1" fill="%234CAF50"/></svg>');
+}
+
+.smoothie-fruits {
+    background-color: #FFE6F0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="%23FFB3D1"/><rect x="14" y="12" width="12" height="16" rx="6" fill="%23E91E63"/><circle cx="18" cy="16" r="2" fill="%23FF6B6B"/><circle cx="22" cy="20" r="2" fill="%23FFC107"/><rect x="18" y="8" width="4" height="6" fill="%234CAF50"/></svg>');
+}
+
+.hot-chicken-wings {
+    background-color: #FFEBE6;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="%23FFCCB3"/><ellipse cx="20" cy="20" rx="12" ry="8" fill="%23FF6B35"/><path d="M12 18c2-2 4-2 6 0s4 2 6 0 4-2 6 0" stroke="%23FFC107" stroke-width="2" fill="none"/><circle cx="18" cy="18" r="1" fill="%23FFF"/><circle cx="22" cy="18" r="1" fill="%23FFF"/></svg>');
+}
+
+.food-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.food-name {
+    font-size: 14px;
+    font-weight: 400;
+    color: #1F384C;
+}
+
+.food-price {
+    font-size: 12px;
+    color: #6B7280;
+    font-weight: 400;
 }
 
 .dashboard .row-2 .line-chart {
@@ -598,12 +679,12 @@ h3 {
     align-items: center;
     justify-content: center;
     color: black;
-    font-weight: bold;
+    font-weight: 400;
     border-left: solid 1px #C8CBD9;
 }
 
 .menu-item.no-icon {
-    font-weight: 600;
+    font-weight: 400;
     color: #6B7280;
     font-size: 12px;
     text-transform: uppercase;
