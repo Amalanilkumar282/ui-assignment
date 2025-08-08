@@ -256,18 +256,11 @@ h3 {
 }
 
 .bar {
-    width: 40px;
-    background: linear-gradient(45deg, #5A67BA, #7B88E8);
-    border-radius: 4px 4px 0 0;
+    width: 8px;
+    background-color: #5A6ACF;
+    /* border-radius: 4px 4px 0 0; */
     margin: 0 5px;
     position: relative;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.bar:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(90, 103, 186, 0.3);
 }
 
 .bar-label {
@@ -296,23 +289,6 @@ h3 {
     transition: opacity 0.3s ease;
 }
 
-.bar:hover .bar-value {
-    opacity: 1;
-}
-
-.chart-y-axis {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 30px;
-    width: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 11px;
-    color: #6B7280;
-}
-
 .chart-x-axis {
     position: absolute;
     bottom: 0;
@@ -322,6 +298,12 @@ h3 {
     background-color: #E1E4E8;
 }
 
+.bar:nth-child(3) { height: 60%; }  
+.bar:nth-child(4) { height: 45%; }  
+.bar:nth-child(5) { height: 80%; }  
+.bar:nth-child(6) { height: 35%; }  
+.bar:nth-child(7) { height: 70%; }  
+.bar:nth-child(8) { height: 55%; }  
 .dashboard .row-1 .donut-chart {
     flex: 1 1 0;             
     background-color: #2196F3;
@@ -390,11 +372,5 @@ h3 {
     padding-left: 0;
 }
 
-/* Bar chart specific heights */
-.bar:nth-child(3) { height: 60%; }  /* Jan - 85 */
-.bar:nth-child(4) { height: 45%; }  /* Feb - 65 */
-.bar:nth-child(5) { height: 80%; }  /* Mar - 92 */
-.bar:nth-child(6) { height: 35%; }  /* Apr - 48 */
-.bar:nth-child(7) { height: 70%; }  /* May - 78 */
-.bar:nth-child(8) { height: 55%; }  /* Jun - 71 */
+
 
