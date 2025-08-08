@@ -239,11 +239,36 @@ h3 {
 
 }
 
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
 .chart-title {
     font-size: 16px;
     font-weight: 600;
     color: #1F384C;
-    margin-bottom: 20px;
+    margin: 0;
+}
+
+.view-report-btn {
+    background-color: white;
+    border: 1px solid #5A6ACF;
+    color: #5A6ACF;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.view-report-btn:hover {
+    background-color: #5A6ACF;
+    color: white;
 }
 
 .chart-container {
@@ -257,8 +282,9 @@ h3 {
     position: absolute;
     left: 10px;
     right: 10px;
-    top: 20px;
-    bottom: 40px;
+    top: 10px;
+    bottom: 30px; /* Increase bottom space for labels */
+    pointer-events: none; /* Prevent interference with bars */
 }
 
 .y-axis-line {
@@ -270,26 +296,33 @@ h3 {
 }
 
 .y-line-1 {
-    top: 20%;
+    top: 0%;
     border-top: 1px dashed #E2E7E7;
     background: none;
 }
 
 .y-line-2 {
-    top: 40%;
+    top: 25%;
     border-top: 1px dashed #E2E7E7;
     background: none;
 }
 
 .y-line-3 {
-    top: 60%;
+    top: 50%;
     border-top: 1px dashed #E2E7E7;
     background: none;
 }
 
 .y-line-4 {
+    top: 75%;
+    border-top: 1px dashed #E2E7E7;
+    background: none;
+}
+
+.y-line-5 {
     bottom: 0;
     background-color: #E2E7E7;
+    border: none;
 }
 
 .bars-container {
@@ -300,6 +333,7 @@ h3 {
     height: 100%;
     z-index: 2;
     position: relative;
+    padding: 10px 0 0 0; /* Add top padding to align with grid */
 }
 
 .bar-group {
