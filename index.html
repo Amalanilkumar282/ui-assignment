@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-circle">G</div>
+                <span class="logo-text">GOODFOOD</span>
+            </div>
+            <ul>
+                <li class="menu-item no-icon">Menu</li>
+                <li class="menu-item">
+                    <img src="Chart.svg" alt="Dashboard" class="menu-icon">
+                    Dashboard
+                </li>
+                <li class="menu-item">
+                    <img src="Buy.svg" alt="Food Order" class="menu-icon">
+                    Food Order
+                </li>
+                <li class="menu-item">
+                    <img src="Document.svg" alt="Manage Menu" class="menu-icon">
+                    Manage Menu
+                </li>
+                <li class="menu-item">
+                    <img src="Chat.svg" alt="Customer Review" class="menu-icon">
+                    Customer Review
+                </li>
+                <li class="menu-item no-icon">Others</li>
+                <li class="menu-item">
+                    <img src="Setting.svg" alt="Settings" class="menu-icon">
+                    Settings
+                </li>
+                <li class="menu-item">
+                    <img src="Wallet.svg" alt="Payments" class="menu-icon">
+                    Payments
+                </li>
+                <li class="menu-item">
+                    <img src="Profile.svg" alt="Accounts" class="menu-icon">
+                    Accounts
+                </li>
+                <li class="menu-item">
+                    <img src="Info-Square.svg" alt="Help" class="menu-icon">
+                    Help
+                </li>
+            </ul>
+        </div>
+
+       
+        <div class="right">
+            <div class="header">
+                <div class="search-container">
+                    <input type="text" class="search-bar" placeholder="Search">
+                    <button class="search-btn"></button>
+                </div>
+                <div class="user-profile">
+                    <div class="avatar">🍔</div>
+                    <span>Delicious Burger</span>
+                    <div class="dropdown-arrow"></div>
+                    <img src="Notif-Icon.svg" alt="Notifications" class="notification-icon">
+                </div>
+            </div>
+
+            <div class="dashboard">
+                <h3>Dashboard</h3>
+                <div class="row-1">
+                    <div class="bar-chart">
+                        <div class="chart-title">Revenue</div>
+                        <div class="chart-container">
+                            <div class="chart-y-axis">
+                                <span>100</span>
+                                <span>75</span>
+                                <span>50</span>
+                                <span>25</span>
+                                <span>0</span>
+                            </div>
+                            <div class="chart-x-axis"></div>
+                            <div class="bar">
+                                <div class="bar-value">85</div>
+                                <div class="bar-label">Jan</div>
+                            </div>
+                            <div class="bar">
+                                <div class="bar-value">65</div>
+                                <div class="bar-label">Feb</div>
+                            </div>
+                            <div class="bar">
+                                <div class="bar-value">92</div>
+                                <div class="bar-label">Mar</div>
+                            </div>
+                            <div class="bar">
+                                <div class="bar-value">48</div>
+                                <div class="bar-label">Apr</div>
+                            </div>
+                            <div class="bar">
+                                <div class="bar-value">78</div>
+                                <div class="bar-label">May</div>
+                            </div>
+                            <div class="bar">
+                                <div class="bar-value">71</div>
+                                <div class="bar-label">Jun</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="donut-chart">Order Time</div>
+                </div>
+                <div class="row-2">
+                    <div class="circle">Your Rating</div>
+                    <div class="list">Most ordered food</div>
+                    <div class="line-chart">Order</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
