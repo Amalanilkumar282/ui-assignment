@@ -209,6 +209,12 @@ body {
     flex-direction: column;
     gap: 0px;
     min-height: 0;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+.dashboard::-webkit-scrollbar {
+    display: none; 
 }
 
 h3 {
@@ -319,8 +325,8 @@ h3 {
     left: 10px;
     right: 10px;
     top: 10px;
-    bottom: 30px; /* Increase bottom space for labels */
-    pointer-events: none; /* Prevent interference with bars */
+    bottom: 30px; 
+    pointer-events: none; 
 }
 
 .y-axis-line {
@@ -369,7 +375,7 @@ h3 {
     height: 100%;
     z-index: 2;
     position: relative;
-    padding: 10px 0 0 0; /* Add top padding to align with grid */
+    padding: 10px 0 0 0; 
 }
 
 .bar-group {
