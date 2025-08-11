@@ -11,11 +11,12 @@
 </head>
 <body>
     <div class="container">
-        
-        <div class="sidebar">
+        <div class="sidebar-overlay"></div>
+        <div class="sidebar" id="mobile-sidebar">
             <div class="sidebar-header">
                 <div class="logo-circle">G</div>
                 <span class="logo-text">GOODFOOD</span>
+                <button class="sidebar-close" aria-label="Close menu">&times;</button>
             </div>
             <ul>
                 <li class="menu-item no-icon">Menu</li>
@@ -58,6 +59,18 @@
        
         <div class="right">
             <div class="header">
+                <div class="mobile-header-row">
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                    <div class="logo-mobile">
+                        <div class="logo-circle">G</div>
+                        <span class="logo-text">GOODFOOD</span>
+                    </div>
+                    <img src="Notif-Icon.svg" alt="Notifications" class="notification-icon">
+                </div>
                 <div class="search-container">
                     <input type="text" class="search-bar" placeholder="Search">
                     <button class="search-btn"></button>
@@ -66,7 +79,6 @@
                     <div class="avatar">🍔</div>
                     <span>Delicious Burger</span>
                     <div class="dropdown-arrow"></div>
-                    <img src="Notif-Icon.svg" alt="Notifications" class="notification-icon">
                 </div>
             </div>
 
@@ -322,5 +334,63 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Mobile Sidebar Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const sidebar = document.getElementById('mobile-sidebar');
+            const sidebarOverlay = document.querySelector('.sidebar-overlay');
+            const sidebarClose = document.querySelector('.sidebar-close');
+            
+            // Function to open sidebar
+            function openSidebar() {
+                sidebar.classList.add('active');
+                sidebarOverlay.classList.add('active');
+                mobileMenuToggle.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+            
+            // Function to close sidebar
+            function closeSidebar() {
+                sidebar.classList.remove('active');
+                sidebarOverlay.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+            
+            // Event listeners
+            mobileMenuToggle.addEventListener('click', function() {
+                if (sidebar.classList.contains('active')) {
+                    closeSidebar();
+                } else {
+                    openSidebar();
+                }
+            });
+            
+            sidebarClose.addEventListener('click', closeSidebar);
+            sidebarOverlay.addEventListener('click', closeSidebar);
+            
+            // Close sidebar when clicking on menu items
+            const menuItems = document.querySelectorAll('.menu-item:not(.no-icon)');
+            menuItems.forEach(item => {
+                item.addEventListener('click', closeSidebar);
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth >= 768) {
+                    closeSidebar();
+                }
+            });
+            
+            // Handle escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+                    closeSidebar();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
