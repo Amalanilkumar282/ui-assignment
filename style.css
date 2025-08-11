@@ -614,87 +614,121 @@ h3 {
 }
 
 .rating-circles {
-    display: flex;
-    flex-wrap: wrap;
     position: relative;
     height: 200px;
-    justify-content: center;
-    align-items: center;
 }
 
 .rating-circle {
-    position: absolute;
+    position: relative;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 4px solid white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    opacity: 0.85;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    mix-blend-mode: multiply;
+}
+
+.rating-content {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-percent {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.rating-label {
+    font-size: 14px;
+    margin-top: 2px;
+    line-height: 1;
+}
+
+.packaging-circle {
+    margin-left: 10px;
+    margin-top: -45px;
+    width: 120px;
+    height: 120px;
+    background-color: #39c2d7;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 .hygiene-circle {
-    background: linear-gradient(135deg, #8B7CF6, #A78BFA);
-    width: 80px;
-    height: 80px;
-    top: 15px;
-    right: 35px;
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: #7d6dc1;
+    left: 80px;
+    top: 0;
     z-index: 3;
 }
 
 .taste-circle {
-    background: linear-gradient(135deg, #FB923C, #FDBA74);
-    width: 125px;
-    height: 125px;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1;
-}
-
-.packaging-circle {
-    background: linear-gradient(135deg, #06B6D4, #67E8F9);
-    width: 100px;
-    height: 100px;
-    bottom: 20px;
-    left: 20px;
+    margin-left: 150px;
+    margin-top: -120px;
+    width: 170px;
+    height: 170px;
+    background-color: #f9a13a;
+    right: 0;
+    top: 40px;
     z-index: 2;
 }
 
-.rating-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: white;
+.rating-circle::before {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    z-index: 0;
 }
 
-.rating-percent {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1;
-    margin-bottom: 2px;
+.packaging-circle::before {
+    width: 130px;
+    height: 130px;
 }
 
-.taste-circle .rating-percent {
-    font-size: 24px;
+.taste-circle::before {
+    width: 180px;
+    height: 180px;
 }
 
-.packaging-circle .rating-percent {
-    font-size: 20px;
+.hygiene-circle::before {
+    width: 110px;
+    height: 110px;
 }
 
-.rating-label {
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 1;
+.packaging-circle::before {
+    border-top-color: #39c2d7;
+    border-left-color: #39c2d7;
+    border-bottom-color: #39c2d7;
+    transform: rotate(-160deg);
 }
 
-.taste-circle .rating-label {
-    font-size: 12px;
+.hygiene-circle::before {
+    border-top-color: #7d6dc1;
+    border-left-color: #7d6dc1;
+    border-bottom-color: #7d6dc1;
+    transform: rotate(-160deg);
 }
 
-.packaging-circle .rating-label {
-    font-size: 11px;
+.taste-circle::before {
+    border-bottom-color: #f9a13a;
+    border-left-color: #f9a13a;
+    border-top-color: #f9a13a;
+    transform: rotate(-160deg);
 }
 
 .dashboard .row-2 .list {
